@@ -2,19 +2,31 @@
 namespace userApp;
 class User
 {
-    public $name;
+    public $asmenskodas;
+    public $vardas;
+    public $pavarde;
+    public $pareigos;
     public $email;
-    public $role;
+    public $uzmokestis;
+    public $busena;
 
-    public function __construct($name, $email, $role){
-        $this->name = $name;
+    public function __construct($asmenskodas, $vardas, $pavarde, $pareigos, $email, $uzmokestis, $busena){
+        $this->asmenskodas = $asmenskodas;
+        $this->vardas = $vardas;
+        $this->pavarde = $pavarde;
+        $this->pareigos = $pareigos;
         $this->email = $email;
-        $this->role = $role;
+        $this->uzmokestis = $uzmokestis;
+        $this->busena = $busena;
     }
     public function showProfile(){
-        $data[] = $this->name;
+        $data[] = $this->asmenskodas;
+        $data[] = $this->vardas;
+        $data[] = $this->pavarde;
+        $data[] = $this->pareigos;
         $data[] = $this->email;
-        $data[] = $this->role;
+        $data[] = $this->uzmokestis;
+        $data[] = $this->busena;
 
         return $data;
     }
